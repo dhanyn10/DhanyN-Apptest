@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-import { Button, Container, Form, FormGroup, Input } from 'reactstrap'
+import { Button, Card, CardBody, CardHeader, Form, FormGroup, Input } from 'reactstrap'
 
 export default class Display extends React.Component{
 
@@ -52,23 +52,26 @@ export default class Display extends React.Component{
     }
     render(){
         return(
-            <Container>
-                <Form>
-                    <FormGroup>
-                        <Input placeholder="firstName" onChange={evt => this.createFirstName(evt)}/>
-                    </FormGroup>
-                    <FormGroup>
-                        <Input placeholder="LastName" onChange={evt => this.createLastName(evt)}/>
-                    </FormGroup>
-                    <FormGroup>
-                        <Input placeholder="age" type="number" onChange={evt => this.createAge(evt)}/>
-                    </FormGroup>
-                    <FormGroup>
-                        <Input placeholder="photo" onChange={evt => this.createPhoto(evt)}/>
-                    </FormGroup>
-                    <Button onClick={this.postData} type="submit">Submit</Button>
-                </Form>
-            </Container>
+            <Card>
+                <CardHeader>Create</CardHeader>
+                <CardBody>
+                    <Form>
+                        <FormGroup>
+                            <Input placeholder="firstName" onChange={evt => this.createFirstName(evt)}/>
+                        </FormGroup>
+                        <FormGroup>
+                            <Input placeholder="LastName" onChange={evt => this.createLastName(evt)}/>
+                        </FormGroup>
+                        <FormGroup>
+                            <Input placeholder="age" type="number" onChange={evt => this.createAge(evt)}/>
+                        </FormGroup>
+                        <FormGroup>
+                            <Input placeholder="photo" onChange={evt => this.createPhoto(evt)}/>
+                        </FormGroup>
+                        <Button onClick={this.postData} type="submit">Submit</Button>
+                    </Form>
+                </CardBody>
+            </Card>
         )
     }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom'
 import {Row, Col, CardText, Card, Button} from 'reactstrap'
 
 export default class Display extends React.Component{
@@ -35,7 +36,7 @@ export default class Display extends React.Component{
                                             <CardText>
                                                 <Row>
                                                     <Col sm="6">
-                                                        <Button color="success">Update</Button>
+                                                        <Link className="btn btn-success" to={`/update/${fulldata.id}`} color="success">Update</Link>
                                                     </Col>
                                                     <Col sm="6">
                                                         <Button onClick={this.deleteData(fulldata.id)} color="danger">Delete</Button>
