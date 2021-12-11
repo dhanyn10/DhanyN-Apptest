@@ -1,9 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import React from 'react';
 import {
-  Container,
-  Card, CardText
-
+  Container
 } from 'reactstrap'
 
 import { Routes, Route} from 'react-router-dom'
@@ -19,16 +17,12 @@ export default class App extends  React.Component{
     return (
       <div>
         <NavbarTop/>
-        <Container>
-          <Card className="mt-4">
-            <CardText>
-              <Routes>
-                <Route path="/" element={<Display/>}/>
-                <Route path="/create" element={<Create/>}/>
-                <Route path="/update/:id" element={<Update/>}/>
-              </Routes>
-            </CardText>
-          </Card>
+        <Container className='mt-4'>
+          <Routes>
+            <Route path="/" element={<Display/>}/>
+            <Route path="/create" element={<Create/>}/>
+            <Route path="/update/:id" element={<Update/>}/>
+          </Routes>
         </Container>
       </div>
     );
