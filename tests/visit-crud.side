@@ -1,0 +1,58 @@
+{
+  "id": "faf428b4-3b11-4c2b-bdad-4ab81cdcaa90",
+  "version": "2.0",
+  "name": "visit-crud",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "59186fed-e86b-43de-b541-9912c395b0c3",
+    "name": "basic test",
+    "commands": [{
+      "id": "5893b131-f05f-4701-8b95-275f83e39015",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ced065ab-388f-41d5-8b32-f83cef362150",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Update",
+      "targets": [
+        ["linkText=Update", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Update')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[2]/div/p/div/div/div/div/p/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/update/b3abd640-c92b-11e8-b02f-cbfa15db428b')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Update')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ffe0eb3-d7b3-4651-9b51-fcc539059dfb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=List",
+      "targets": [
+        ["linkText=List", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'List')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div/nav/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'List')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "b65f5c07-a227-4785-8ccc-1c0f490c7e9e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["59186fed-e86b-43de-b541-9912c395b0c3"]
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}
